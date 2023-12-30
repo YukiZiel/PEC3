@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/9b14d51021.js" crossorigin="anonymous"></script>
+  </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <main class="bg-tennis-place bg-cover bg-center bg-no-repeat">
+            <h2 class="mt-0 pt-12 text-calc-h2 font-semibold text-center uppercase">Formulario de contacto</h2>
+            <div class="w-[60vw] mx-auto mt-16 pb-12">
+                <form class="grid-cols-1 md:grid md:grid-cols-2 gap-4" name="contact" netlify>
+                    <div class="mb-4">
+                        <label class="bg-transparent rounded-xl px-[1vw]">Nombre </label>
+                        <input class="input-custom" type="text" name="name" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="bg-transparent rounded-xl px-[1vw]">Apellidos </label>
+                        <input class="input-custom" type="text" name="lastname" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="bg-transparent rounded-xl px-[1vw]">Email </label>
+                        <input class="input-custom" type="email" name="email" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="bg-transparent rounded-xl px-[1vw]">Programa interesado: </label> 
+                        <select class="input-custom" name="programa[]">
+                            <option value="clase-inicial">Clases Iniciales</option>
+                            <option value="habilidades">Desarrollo de Habilidades</option>
+                            <option value="torneos">Torneos Amistosos</option>
+                            <option value="fisico">Entrenamiento Físico</option>
+                            <option value="equipos">Participación en Equipos</option>
+                            <option value="grupo-reducido">Clases de Grupo Reducido</option>
+                        </select>
+                    </div>
+                    <div class="mb-4 col-span-2">
+                        <label class="bg-transparent rounded-xl px-[1vw]">Mensaje</label> 
+                        <textarea class="input-custom" rows="3" name="message"></textarea>
+                    </div>
+                    <div class= "col-span-2">
+                        <button class="bg-logo-green hover:bg-logo-orange py-2 px-4 rounded-md" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    </body>
+</html>
