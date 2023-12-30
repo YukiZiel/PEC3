@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -30,20 +30,6 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    function ({ addComponents, theme }) {
-        addComponents({
-          '.custom-widths': {
-            width: theme('width.calc-1/3'),
-            '@media (max-width: 768px)': {
-              width: theme('width.calc-1/2'),
-            },
-            '@media (max-width: 480px)': {
-              width: theme('width.calc-1'),
-            },
-          },
-        })
-      }
-    ],
+  plugins: [],
 }
 
